@@ -1,0 +1,20 @@
+<ion-view view-title="{{product.name}}">
+  <ion-content padding="true">
+    <div class="list list-inset">
+      <img ng-src="{{product.img}}"></img>
+      <ion-item class="item item-avatar">
+          <img ng-src="{{seller.face}}"></img>
+          <h2>{{seller.name}}</h2>
+          <p>{{seller.shortDescription}}</p>
+      </ion-item>
+    </div>
+    <div>
+      <p><b>Origen:</b> {{product.origin}}</p>
+      <p><b>Ubicación:</b> {{product.location}}</p>
+      <p>{{product.description}}</p>
+    </div>
+    <div>
+      <img src="http://ichef.bbci.co.uk/news/1024/media/images/82931000/jpg/_82931280_82931279.jpg" height="200px"></img>
+    </div>
+  </ion-content>
+</ion-view>
