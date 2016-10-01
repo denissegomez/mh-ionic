@@ -8,13 +8,21 @@
       <p><b>Categoría:</b> {{product.category}}</p>
       <p>{{product.description}}</p>
     </ion-item>
-    <div>
-      <img src="http://ichef.bbci.co.uk/news/1024/media/images/82931000/jpg/_82931280_82931279.jpg" height="200px"></img>
-    </div>
     <ion-item class="item item-avatar">
           <img ng-src="{{product.seller.face}}"></img>
           <h2>{{product.seller.name}}</h2>
           <p>{{product.seller.shortDescription}}</p>
-      </ion-item>
+    </ion-item>
+    <div>
+      <img src="http://ichef.bbci.co.uk/news/1024/media/images/82931000/jpg/_82931280_82931279.jpg" height="200px"></img>
+    </div>
+    <ion-item class="item item-icon-left">
+        <i class="icon ion-map"></i>
+        {{product.seller.address}}
+    </ion-item>
+    <ion-item class="item item-icon-left" href="tel:{{product.seller.phone}}">
+        <i class="icon ion-ios-telephone"></i>
+        {{product.seller.phone}}
+    </ion-item>
   </ion-content>
 </ion-view>
