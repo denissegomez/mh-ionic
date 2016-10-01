@@ -18,13 +18,13 @@ angular.module('starter.services', [])
 })
 
 .factory('SellersService', function(){
-    var sellers = [
-        {id: 1, face: 'img/iguazu.jpg', name: 'Tienda Iguazú', shortDescription: 'Productos Latinos' },
-    ];
+    // var sellers = [
+    //     {id: 1, face: 'img/iguazu.jpg', name: 'Tienda Iguazú', shortDescription: 'Productos Latinos' },
+    // ];
 
-    return {
-        getSeller: function(id){
-            return sellers[id - 1]; // TODO: This works as long as id is autoincremental. Implement proper solution
-        }
-    }
+    // return {
+    //     getSeller: function(id){
+    //         return sellers[id - 1]; // TODO: This works as long as id is autoincremental. Implement proper solution
+    //     }
+    // }
 })

@@ -1,0 +1,24 @@
+{
+  "products" : [ null, {
+    "category" : "Salsas y especias",
+    "description" : "Producto en polvo nativo del sudeste de India. Es una planta herbácea de la familia de las zingiberáceas de la cual también proviene el curry.",
+    "img" : "http://misremedios.com/wp-content/uploads/2015/05/Curcuma-300x200.jpg",
+    "name" : "Curcuma",
+    "origin" : "Asia",
+    "seller" : {
+      "address" : "Passeig de Gracia 59, Barcelona",
+      "face" : "http://www.iguazuargentina.com/wp-content/uploads/2012/05/phpThumb_generated_thumbnail-1.jpeg",
+      "id" : 1,
+      "name" : "Tienda Iguazú",
+      "phone" : 931456732,
+      "shortDescription" : "Productos Latinos"
+    }
+  } ],
+  "sellers" : [ null, {
+    "address" : "Passeig de Gracia 59, Barcelona",
+    "face" : "http://www.iguazuargentina.com/wp-content/uploads/2012/05/phpThumb_generated_thumbnail-1.jpeg",
+    "name" : "Tienda Iguazú",
+    "phone" : 931456732,
+    "shortDescription" : "Productos Latinos"
+  } ]
+}
