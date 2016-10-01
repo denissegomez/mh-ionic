@@ -18,27 +18,22 @@
     </ion-header-bar>
     <ion-content>
       <ion-list>
-        <ion-item menu-close class="item item-icon-left" href="#/app/home">
-          <i class="icon ion-ios-home-outline"></i>
-          Inicio
+        <ion-item menu-close class="item item-icon-left positive" href="#/app/home">
+          <i class="icon ion-images"></i>
+          Presentación de la app
         </ion-item>
-        <ion-item menu-close  class="item item-icon-left positive" ng-click="login()" ng-hide="isLoggedIn">
-          <i class="icon ion-log-in"></i>
-          Login
+        <ion-item menu-close  class="item item-icon-left">
+          <i class="icon ion-help"></i>
+          Preguntas frecuentes
         </ion-item>
-        <ion-item menu-close class="item item-avatar positive" href="#/app/profile" ng-show="isLoggedIn">
-          <img ng-src="{{seller.face}}"></img>
-          <h2>{{seller.name}}</h2>
-          <p>{{seller.shortDescription}}</p>
+        <ion-item menu-close class="item item-icon-left" ng-click="login()" ng-hide="isLoggedIn">
+          <i class="icon ion-clipboard"></i>
+          Enviar consulta
         </ion-item>
-        <ion-item menu-close class="item item-icon-left positive" href="#/app/upload" ng-show="isLoggedIn">
-          <i class="icon ion-ios-upload-outline"></i>
-          Subir Artículos
+        <ion-item menu-close  class="item item-icon-left">
+          <i class="icon ion-android-globe"></i>
+          Idioma
         </ion-item>
-        <ion-item menu-close class="item item-icon-left assertive" ng-click="logout()" ng-show="isLoggedIn">
-          <i class="icon ion-log-out"></i>
-          Cerrar Sesión
-        </ion-item>        
       </ion-list>
     </ion-content>
   </ion-side-menu>
