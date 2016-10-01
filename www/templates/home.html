@@ -3,11 +3,11 @@
     <ion-list>
       <ion-item class="item item-thumbnail-left"
                 ng-repeat="product in products" 
-                href="#/app/products/{{product.id}}">
+                href="#/app/products/{{product.$id}}">
         <img ng-src="{{product.img}}">
         <h2>{{product.name}}</h2>
-        <p>Origen: {{product.origin}}</p> 
-        <p>Ubicación: {{product.location}}</p>       
+        <p>{{product.origin}}</p>
+        <p>{{product.category}}</p>        
       </ion-item>
     </ion-list>
   </ion-content>

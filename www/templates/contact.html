@@ -1,33 +1,27 @@
-<ion-modal-view>
-  <ion-header-bar>
-    <h1 class="title">Consulta</h1>
-    <div class="buttons">
-      <button class="button button-clear" ng-click="closeLogin()">Close</button>
-    </div>
-  </ion-header-bar>
-  <ion-content>
-    <form ng-submit="doLogin()">
+<ion-view view-title="Consulta">
+  <ion-content padding="true">
+    <form ng-submit="sendContactForm()">
       <div class="list">
         <label class="item item-input item-stacked-label">
           <span class="input-label">Nombre</span>
-          <input type="text" placeholder="Juan">
+          <input type="text" placeholder="Dinos tu nombre">
         </label>
         <label class="item item-input item-stacked-label">
           <span class="input-label">Apellido</span>
-          <input type="text" placeholder="Fernandez">
+          <input type="text" placeholder="Y tu apellido">
         </label>
         <label class="item item-input item-stacked-label">
           <span class="input-label">Correo electrónico</span>
-          <input type="text" placeholder="juan@fernandez.com">
+          <input type="text" placeholder="Escribe aquí tu email">
         </label>
         <label class="item item-input item-stacked-label">
           <span class="input-label">Comentario</span>
-          <textarea type="text" placeholder="Escriba aquí su consulta"></textarea>
+          <textarea type="text" placeholder="Escribe aquí tu consulta"></textarea>
         </label>
-        <button class="button button-block button-positive">
+        <button type="sumbit" class="button button-block button-positive">
            Enviar
         </button>
       </div>
     </form>
   </ion-content>
-</ion-modal-view>
+</ion-view>
