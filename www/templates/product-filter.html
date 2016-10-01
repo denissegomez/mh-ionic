@@ -1,0 +1,31 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-positive">
+        <div class="buttons">
+            <button class="button button-icon ion-android-arrow-back" ng-click="cancelFilter()"></button>
+        </div>
+        <h1 class="title"></h1>
+        <div class="buttons">
+            <button class="button button-icon ion-checkmark" ng-click="applyFilter()"></button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <label class="item item-input item-select">
+                <span class="input-label">Categoría</span>
+                <select>
+                    <option ng-repeat="category in categories" value="{{category.$id}}">
+                        {{category.name}}
+                    </option>
+                </select>
+            </label>
+            <label class="item item-input item-select">
+                <span class="input-label">Región</span>
+                <select>
+                    <option ng-repeat="region in regions" value="{{region.$id}}">
+                        {{region.name}}
+                    </option>
+                </select>
+            </label>
+        </div>
+    </ion-content>
+</ion-modal-view>

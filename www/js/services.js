@@ -1,5 +1,29 @@
 angular.module('starter.services', [])
 
+.factory('CategoriesService', function($firebaseArray, ApiUrl){
+    var categoriesRef = new Firebase(ApiUrl + '/categories');	
+	var categories = [];
+
+    return {
+        getAll: function(){
+            categories = $firebaseArray(categoriesRef);
+            return categories;  
+        },       
+    }
+})
+
+.factory('RegionsService', function($firebaseArray, ApiUrl){
+    var regionsRef = new Firebase(ApiUrl + '/regions');	
+	var regions = [];
+
+    return {
+        getAll: function(){
+            regions = $firebaseArray(regionsRef);
+            return regions;  
+        },       
+    }
+})
+
 .factory('ProductsService', function($firebaseArray, $firebaseObject, ApiUrl){
 
     var productsRef = new Firebase(ApiUrl + '/products');	

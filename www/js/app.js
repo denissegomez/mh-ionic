@@ -41,6 +41,15 @@ angular.module('starter', ['ionic',
       }
   })
 
+  .state('app.questions', {
+      url: '/questions',
+      views: {
+        'menuContent': {
+            templateUrl: 'templates/questions.html',
+        }
+      }
+  })
+
   .state('app.home', {
       url: '/home',
       views: {
@@ -60,7 +69,7 @@ angular.module('starter', ['ionic',
       }
     }
   })
-  
+
   .state('app.profile', {
       url: '/profile',
       views: {

@@ -1,4 +1,17 @@
 {
+  "categories" : [ null, {
+    "name" : "Bebidas"
+  }, {
+    "name" : "Pasta, arroz y legumbres"
+  }, {
+    "name" : "Embutidos y quesos"
+  }, {
+    "name" : "Frutas"
+  }, {
+    "name" : "Salsas y especias"
+  }, {
+    "name" : "Dulces"
+  } ],
   "products" : [ null, {
     "category" : "Salsas y especias",
     "description" : "Producto en polvo nativo del sudeste de India. Es una planta herbácea de la familia de las zingiberáceas de la cual también proviene el curry.",
@@ -13,6 +26,19 @@
       "phone" : 931456732,
       "shortDescription" : "Productos Latinos"
     }
+  } ],
+  "regions" : [ null, {
+    "name" : "Norte America"
+  }, {
+    "name" : "Sudamérica"
+  }, {
+    "name" : "Europa"
+  }, {
+    "name" : "Asia"
+  }, {
+    "name" : "África"
+  }, {
+    "name" : "Oceanía"
   } ],
   "sellers" : [ null, {
     "address" : "Passeig de Gracia 59, Barcelona",

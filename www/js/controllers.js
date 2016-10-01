@@ -4,8 +4,34 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('HomeCtrl', function($scope, ProductsService) {
-  $scope.products = ProductsService.getAll();
+.controller('HomeCtrl', function($scope, $ionicModal, ProductsService, CategoriesService, RegionsService) {
+    $scope.products = ProductsService.getAll();
+    $scope.categories = CategoriesService.getAll();
+    $scope.regions = RegionsService.getAll();
+
+    // FILTER MODAL
+    $ionicModal.fromTemplateUrl('templates/product-filter.html', {
+      scope: $scope,
+      animation: 'slide-in-up'
+    }).then(function(modal) {
+      $scope.modal = modal;
+    });
+
+    $scope.openModal = function() {
+      $scope.modal.show();
+    };
+
+    $scope.applyFilter = function() {
+      $scope.modal.hide();
+    };
+
+    $scope.cancelFilter = function() {
+      $scope.modal.hide();
+    };
+
+    $scope.$on('$destroy', function() {
+      $scope.modal.remove();
+    });
 })
 
 .controller('ProductCtrl', function($scope, $stateParams, ProductsService) {
