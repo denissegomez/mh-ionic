@@ -78,6 +78,15 @@ angular.module('starter', ['ionic',
         }
       }
     })
+
+      .state('app.tutorial', {
+      url: '/tutorial',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/tutorial.html'
+        }
+      }
+    })
     
     .state('app.upload', {
     url: '/upload',

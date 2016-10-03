@@ -1,0 +1,23 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-positive">
+        <div class="buttons">
+            <button class="button button-icon ion-android-arrow-back" ng-click="cancelFilter()"></button>
+        </div>
+        <h1 class="title"></h1>
+        <div class="buttons">
+            <button class="button button-icon ion-checkmark" ng-click="applyFilter()"></button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <div class="item item-input-inset">
+                <label class="item-input-wrapper">
+                <input type="text" placeholder="Email">
+                </label>
+                <button class="button button-small">
+                Submit
+                </button>
+            </div>
+        </div>                
+    </ion-content>
+</ion-modal-view>

@@ -41,3 +41,4 @@ angular.module('starter.controllers', [])
 .controller('ContactCtrl', function($scope){
 
 })
+
