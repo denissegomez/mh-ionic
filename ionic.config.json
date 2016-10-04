@@ -1,0 +1,13 @@
+{
+  "name": "mh-ionic",
+  "app_id": "1f5449d7",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ]
+}

@@ -1,9 +1,15 @@
 <ion-view view-title="Market Help">
   <ion-nav-buttons side="secondary">
       <button class="button button-icon ion-funnel" ng-click="openModal()"></button>
-      <button class="button button-icon ion-ios-search-strong" ng-click="doSomething()"></button>
+      <button class="button button-icon ion-ios-search-strong" ng-click="toggleSearch()"></button>
   </ion-nav-buttons>
   <ion-content>
+    <div class="list list-inset" ng-show="isSearchVisible">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Search">
+      </label>
+    </div>
     <ion-list>
       <ion-item class="item item-thumbnail-left"
                 ng-repeat="product in products" 

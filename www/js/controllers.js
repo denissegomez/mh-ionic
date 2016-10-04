@@ -9,6 +9,13 @@ angular.module('starter.controllers', [])
     $scope.categories = CategoriesService.getAll();
     $scope.regions = RegionsService.getAll();
 
+    // SEARCH
+    $scope.isSearchVisible = false;
+
+    $scope.toggleSearch = function toggleSearch(){
+      $scope.isSearchVisible = !$scope.isSearchVisible;
+    }
+
     // FILTER MODAL
     $ionicModal.fromTemplateUrl('templates/product-filter.html', {
       scope: $scope,
