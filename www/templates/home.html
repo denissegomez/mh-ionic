@@ -7,12 +7,12 @@
     <div class="list list-inset" ng-show="isSearchVisible">
       <label class="item item-input">
         <i class="icon ion-search placeholder-icon"></i>
-        <input type="text" placeholder="Search">
+        <input type="text" placeholder="Search" ng-model="searchText">
       </label>
     </div>
     <ion-list>
       <ion-item class="item item-thumbnail-left"
-                ng-repeat="product in products" 
+                ng-repeat="product in products | filter:searchText" 
                 href="#/app/products/{{product.$id}}">
         <img ng-src="{{product.img}}">
         <h2>{{product.name}}</h2>
