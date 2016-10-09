@@ -42,7 +42,17 @@ angular.module('starter.controllers', [])
 })
 
 .controller('ProductCtrl', function($scope, $stateParams, ProductsService) {
-  $scope.product = ProductsService.getProduct($stateParams.productId); // { img: 'img/bonobon.png', origin: 'Argentina', location: 'Badalona', name: 'Bombones', id: 2, description: "Estos son los mejores mejores bombones de toda sudamérica." };
+  var mapSrc="https://www.google.com/maps/embed/v1/place?q=";
+  var key="key=AIzaSyCbYJ4j5j31bQPBCdAekW6fXakQI_d1Uak";
+
+  $scope.product = ProductsService.getProduct($stateParams.productId); 
+  $scope.product.$loaded(function(){
+    console.log("LOADED");
+    var address = $scope.product.seller.address;
+    var mapSource = mapSrc + address.split(' ').join('+') + "&" + key;
+    console.log("MapSource", mapSource);
+    document.getElementById("map").setAttribute("src", mapSource);
+  })
 })
 
 .controller('ContactCtrl', function($scope){
