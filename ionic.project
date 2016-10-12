@@ -1,4 +1,5 @@
 {
   "name": "mh-ionic",
-  "app_id": "1f5449d7"
+  "app_id": "1f5449d7",
+  "gulpStartupTasks": ["sass", "watch"]
 }
