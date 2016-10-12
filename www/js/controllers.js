@@ -5,15 +5,54 @@ angular.module('starter.controllers', [])
 })
 
 .controller('HomeCtrl', function($scope, $ionicModal, ProductsService, CategoriesService, RegionsService) {
-    $scope.products = ProductsService.getAll();
+    $scope.originalProducts = ProductsService.getAll();
+    $scope.originalProducts.$loaded(function(){
+      $scope.products = $scope.originalProducts;
+    });
+
     $scope.categories = CategoriesService.getAll();
+    $scope.categories.$loaded(function(){
+      $scope.category = $scope.categories[0];
+    });
+
     $scope.regions = RegionsService.getAll();
+    $scope.regions.$loaded(function(){
+      $scope.region = $scope.regions[0];
+    });
 
     // SEARCH
     $scope.isSearchVisible = false;
-
     $scope.toggleSearch = function toggleSearch(){
       $scope.isSearchVisible = !$scope.isSearchVisible;
+    }
+
+    // FILTER
+    $scope.categoryChanged = function categoryChanged(selected){
+      $scope.selectedCategory = selected;
+    }
+
+    $scope.regionChanged = function regionChanged(selected){
+      $scope.selectedRegion = selected;
+    }
+
+    $scope.filterProducts = function filter(){
+      $scope.products = [];
+      angular.forEach($scope.originalProducts, function(product, key){
+          var categoryMatch = false;
+          var regionMatch = false;
+
+          if ($scope.selectedCategory.name == "Todas" || product.category == $scope.selectedCategory.name){
+            categoryMatch = true;
+          }
+          
+          if ($scope.selectedRegion.name == "Todas" || product.origin == $scope.selectedRegion.name){
+            regionMatch = true;
+          }
+          
+          if (categoryMatch && regionMatch){
+            $scope.products.push(product);
+          }
+      });
     }
 
     // FILTER MODAL
@@ -29,10 +68,28 @@ angular.module('starter.controllers', [])
     };
 
     $scope.applyFilter = function() {
+      if ($scope.selectedCategory == undefined){
+        $scope.selectedCategory = $scope.category;
+      }
+      else {
+        $scope.category == $scope.selectedCategory;
+      }
+      
+      if ($scope.selectedRegion == undefined){
+        $scope.selectedRegion = $scope.region;
+      }
+      else{
+        $scope.region = $scope.selectedRegion;
+      }
+
+      $scope.filterProducts();
       $scope.modal.hide();
     };
 
     $scope.cancelFilter = function() {
+      $scope.selectedCategory = $scope.category;
+      $scope.selectedRegion = $scope.region;
+
       $scope.modal.hide();
     };
 

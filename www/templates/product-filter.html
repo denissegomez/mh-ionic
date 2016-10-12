@@ -12,19 +12,13 @@
         <div class="list">
             <label class="item item-input item-select">
                 <span class="input-label">Categoría</span>
-                <select>
-                    <option ng-repeat="category in categories" value="{{category.$id}}">
-                        {{category.name}}
-                    </option>
-                </select>
+                <select ng-options="category as category.name for category in categories" 
+                        ng-model="category" ng-change="categoryChanged(category)"></select>
             </label>
             <label class="item item-input item-select">
                 <span class="input-label">Región</span>
-                <select>
-                    <option ng-repeat="region in regions" value="{{region.$id}}">
-                        {{region.name}}
-                    </option>
-                </select>
+                <select ng-options="region as region.name for region in regions" 
+                        ng-model="region" ng-change="regionChanged(region)"></select>
             </label>
         </div>
     </ion-content>
