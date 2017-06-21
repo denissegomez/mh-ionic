@@ -19,7 +19,7 @@ angular.module('starter', ['ionic',
   });
 })
 
-.constant('ApiUrl', 'https://markethelp.firebaseio.com')
+.constant('ApiUrl', 'https://mh-ionic.firebaseio.com')
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
