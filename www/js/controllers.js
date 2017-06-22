@@ -112,7 +112,29 @@ angular.module('starter.controllers', [])
   })
 })
 
-.controller('ContactCtrl', function($scope){
+.controller('ContactCtrl', function($scope, $ionicPopup){
+
+  $scope.contact = {
+    name: '',
+    lastname: '',
+    email: '',
+    comment: '',
+  }
+
+  $scope.sendContactForm = function(){
+    $scope.showAlert();
+  }
+
+  $scope.showAlert = function(){
+    var alertPopup = $ionicPopup.alert({
+      title: 'Contacto realizado',
+      template: 'Gracias por contactarnos. Nos pondremos en contacto contigo a la mayor brevedad posible.'
+    });
+
+    alertPopup.then(function(res){
+      $scope.contact = {};
+    });
+  }
 
 })
 

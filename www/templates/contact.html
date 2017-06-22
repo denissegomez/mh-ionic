@@ -1,24 +1,24 @@
 <ion-view view-title="Consulta">
   <ion-content padding="true">
-    <form ng-submit="sendContactForm()">
+    <form ng-submit="sendContactForm()" name="contactForm" novalidate>
       <div class="list">
         <label class="item item-input item-stacked-label">
-          <span class="input-label">Nombre</span>
-          <input type="text" placeholder="Dinos tu nombre">
+          <span class="input-label">Nombre*</span>
+          <input type="text" placeholder="Dinos tu nombre" ng-model="contact.name" required>
         </label>
         <label class="item item-input item-stacked-label">
           <span class="input-label">Apellido</span>
-          <input type="text" placeholder="Y tu apellido">
+          <input type="text" placeholder="Y tu apellido" ng-model="contact.lastname">
         </label>
         <label class="item item-input item-stacked-label">
-          <span class="input-label">Correo electrónico</span>
-          <input type="text" placeholder="Escribe aquí tu email">
+          <span class="input-label">Correo electrónico*</span>
+          <input type="email" placeholder="Escribe aquí tu email" ng-model="contact.email" required>
         </label>
         <label class="item item-input item-stacked-label">
-          <span class="input-label">Comentario</span>
-          <textarea type="text" placeholder="Escribe aquí tu consulta"></textarea>
+          <span class="input-label">Comentario*</span>
+          <textarea type="text" placeholder="Escribe aquí tu consulta" ng-model="contact.comment" required></textarea>
         </label>
-        <button type="sumbit" class="button button-block button-positive">
+        <button type="sumbit" class="button button-block button-positive" ng-disabled="contactForm.$invalid">
            Enviar
         </button>
       </div>
