@@ -104,7 +104,7 @@ angular.module('starter.controllers', [])
 
   $scope.product = ProductsService.getProduct($stateParams.productId); 
   $scope.product.$loaded(function(){
-    console.log("LOADED");
+    console.log("LOADED", $scope.product);
     var address = $scope.product.seller.address;
     var mapSource = mapSrc + address.split(' ').join('+') + "&" + key;
     console.log("MapSource", mapSource);
